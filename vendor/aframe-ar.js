@@ -881,6 +881,8 @@ function generateObject(obj)
 {
 	var object;
 
+	console.log('OBJ.TYPE ',obj.type)
+
 	switch(obj.type)
 	{
 		case 'a-box':
@@ -904,11 +906,16 @@ function generateObject(obj)
 		break;
 	}
 
+	console.log('**** ',object);
+
+
 	return object;
 }
 
 function generateText(obj)
 {
+	console.log('generateText ');
+
 	var object 	= document.createElement('a-entity');
 	object.setAttribute("text-geometry"	, "value: "+obj.title+"; font: #optimerBoldFont");
 	object.setAttribute("position"		, "-1.3 .3 -.3");
@@ -931,12 +938,7 @@ function generateText(obj)
 
 	var button = generateButton(obj,1.7);
 
-	//return [object,object1,plane].concat(button);
-
-	var object 	= document.createElement('a-box');
-	object.setAttribute("position"	, '0 0.5 0');
-	object.setAttribute("material"	, 'opacity: 0.5; side:double; color:red;');
-	return object;
+	return [object,object1,plane].concat(button);
 }
 
 function generateButton(obj,pos)
@@ -976,6 +978,8 @@ function getJSON()
 
 					var aMarker = document.createElement("a-marker");
 					aMarker.setAttribute("preset", data[pat].pattern);
+
+					console.log(object)
 
 					if(object[1])
 					{
