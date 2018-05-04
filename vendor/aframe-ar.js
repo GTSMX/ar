@@ -917,28 +917,29 @@ function generateText(obj)
 	console.log('generateText ');
 
 	var object 	= document.createElement('a-entity');
-	object.setAttribute("text-geometry"	, "value: "+obj.title+"; font: #optimerBoldFont");
-	object.setAttribute("position"		, "-1.3 .3 -.3");
+	object.setAttribute("text-geometry"	, "value: "+obj.title+"; size:.2; font: #optimerBoldFont");
+	object.setAttribute("position"		, "-.3 .2 -.2");
 	object.setAttribute("rotation"		, "-90 0 0");
 	object.setAttribute("material"		, "color:white;");
 
 	var object1	= document.createElement('a-entity');
-	object1.setAttribute("text"	, 		"width: 3; align:center; letterSpacing: 5; color: white; value: "+obj.text);
-	object1.setAttribute("position"		, "0 0 .3");
+	object1.setAttribute("text"	, 		"width: 2; align:center; letterSpacing: 5; color: white; value: "+obj.text);
+	object1.setAttribute("position"		, "0 .1 .25");
 	object1.setAttribute("rotation"		, "-90 0 0");
 
 	var plane	= document.createElement('a-plane');
-	plane.setAttribute("position"	, "-.5 -.5 0");
+	plane.setAttribute("position"	, ".05 0 0");
 	plane.setAttribute("src"		, "#fondo");
-	plane.setAttribute("width"		, "4.5");
-	plane.setAttribute("height"		, "2.5");
+	plane.setAttribute("width"		, "1");
+	plane.setAttribute("height"		, "1");
 	plane.setAttribute("rotation"	,"-90 0 0");
 	//plane.setAttribute("href"		, obj.url);
 	//plane.setAttribute("target"		, obj.target);
 
-	var button = generateButton(obj,1.7);
+	//var button = generateButton(obj,1.7);
 
-	return [object,object1,plane].concat(button);
+	//return [object,object1,plane].concat(button);
+	return [object,object1,plane];
 }
 
 function generateButton(obj,pos)
