@@ -8,8 +8,8 @@
     "material": "color: white;",
     "url": "https://www.sams.com.mx/",
     "target": "_blank",
-    "title": "Walmart",
-    "text": "If not specified, fontImage will be the font‘s name, but with the extension replaced to .png. For example, if the font path ends with mozillavr.fnt, then the fontImage texture will default to mozillavr.png."
+    "title": "On Boarding",
+    "text": "Onboarding is a platform that provides the associates a guide from their onboarding process and through all their career at Walmart. Includes an on boarding, Skills  and training section."
   }
 }, {
   "pattern": "compass",
@@ -21,8 +21,8 @@
     "material": "color: white;",
     "url": "https://www.sams.com.mx/",
     "target": "_blank",
-    "title": "Walmart",
-    "text": "If not specified, fontImage will be the font‘s name, but with the extension replaced to .png. For example, if the font path ends with mozillavr.fnt, then the fontImage texture will default to mozillavr.png."
+    "title": "Compass Merchant",
+    "text": "Is a web based application that is helping merchandising teams to improve decision making by simplifying operations with automated task."
   }
 }, {
   "pattern": "sales",
@@ -34,8 +34,8 @@
     "material": "color: white;",
     "url": "https://www.sams.com.mx/",
     "target": "_blank",
-    "title": "Walmart",
-    "text": "If not specified, fontImage will be the font‘s name, but with the extension replaced to .png. For example, if the font path ends with mozillavr.fnt, then the fontImage texture will default to mozillavr.png."
+    "title": "Sales",
+    "text": "The sales App provides associates with the previous hour sales information to improve merchandising and research any sales opportunities."
   }
 }, {
   "pattern": "managers",
@@ -47,7 +47,7 @@
     "material": "color: white;",
     "url": "https://www.sams.com.mx/",
     "target": "_blank",
-    "title": "Walmart",
-    "text": "If not specified, fontImage will be the font‘s name, but with the extension replaced to .png. For example, if the font path ends with mozillavr.fnt, then the fontImage texture will default to mozillavr.png."
+    "title": "Managers Recap",
+    "text": "Managers recap is an application that helps to the store managers to consult important data and information that is available in the Managers Recap Store Report as the flash sales summary, the flash margin, the member or client count, the increment % by department and the average basket of the day."
   }
 }]
