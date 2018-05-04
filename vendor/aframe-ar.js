@@ -918,12 +918,12 @@ function generateText(obj)
 
 	var object 	= document.createElement('a-entity');
 	object.setAttribute("text-geometry"	, "value: "+obj.title+"; size:.2; font: #optimerBoldFont");
-	object.setAttribute("position"		, "-.3 .1 -.2");
+	object.setAttribute("position"		, "-.3 .2 -.2");
 	object.setAttribute("rotation"		, "-90 0 0");
 	object.setAttribute("material"		, "color:white;");
 
 	var object1	= document.createElement('a-entity');
-	object1.setAttribute("text"	, 		"width: 2; align:center; letterSpacing: 5; color: #fdd080; value: "+obj.text);
+	object1.setAttribute("text"	, 		"width: 2; align:center; letterSpacing: 5; color: white; value: "+obj.text);
 	object1.setAttribute("position"		, "0 .1 .25");
 	object1.setAttribute("rotation"		, "-90 0 0");
 
