@@ -877,6 +877,25 @@ function generateModel(obj)
 	//return object;
 }
 
+function generateVideo(obj)
+{
+	//<a-video id="video" src="#video" width="2" height="1" position="0 .5 0" rotation="-90 0 0" ></a-video>
+
+    var object 	= document.createElement(obj.type);
+    object.setAttribute("id"		, obj.src);
+    object.setAttribute("src"		, '#'+obj.src);
+    object.setAttribute("width"		, obj.width);
+    object.setAttribute("height"	, obj.height);
+    object.setAttribute("position"	, obj.position);
+    object.setAttribute("rotation"	, obj.rotation);
+    object.setAttribute("videoplay" , true);
+
+    return object;
+
+
+	//return object;
+}
+
 function generateObject(obj)
 {
 	var object;
@@ -900,6 +919,10 @@ function generateObject(obj)
 		case 'a-entity':
 			object = generateModel(obj);
 		break;
+
+        case 'a-video':
+            object = generateVideo(obj);
+            break;
 
 		case 'text':
 			object = generateText(obj);
@@ -1034,9 +1057,8 @@ $(document).ready(function()
 		getJSON().then((data) =>
 		{
 			patterns = data;
-		Object.assign( THREEx.ArToolkitContext.prototype, THREE.EventDispatcher.prototype );
-
-	});
+			Object.assign( THREEx.ArToolkitContext.prototype, THREE.EventDispatcher.prototype );
+		});
 	}
 	else
 	{

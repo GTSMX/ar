@@ -7,6 +7,7 @@
 <script src="vendor/aframe-ar.js"></script>
 <script src="vendor/vendor.js"></script>
 <script src="vendor/aframe-href.js"></script>
+<script src="vendor/aframe-videoplay.js"></script>
 
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
 <div id="arjs" style='position: fixed; top: 10px; width:inherit; text-align: center; z-index: 1;'>
@@ -20,6 +21,7 @@
 		<img id="fondo" src="images/fondo.png">
 		<a-asset-item id="optimerBoldFont"  src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
 		<a-asset-item id="walmartFont" 		src="fonts/Signika_Regular.json"></a-asset-item>
+		<video id="video" playsinline loop="true" src="video/video1.webm"></video>
 	</a-assets>
 
 	<!-- add a simple camera -->
@@ -35,6 +37,12 @@
 						 fill="forwards" from="1 1 1" to="0.1 0.1 0.1" dur="1500"></a-animation>
 		</a-ring>
 	</a-entity>
+
+
+	<!--a-marker preset='walmart' markerhelpers=true>
+		<a-video id="video" src="#video" width="2" height="1" position="0 .5 0" rotation="-90 0 0" ></a-video>
+	</a-marker-->
+
 </a-scene>
 </body>
 </html>

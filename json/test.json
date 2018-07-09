@@ -1,17 +1,32 @@
-[{
-  "pattern": "onboarding",
-  "type": "pattern",
-  "patternUrl": "markers/onboarding.patt",
-  "object": {
-    "type": "text",
-    "rotation": "-90 0 0",
-    "material": "color: white;",
-    "url": "https://www.sams.com.mx/",
-    "target": "_blank",
-    "title": "On Boarding",
-    "text": "Onboarding is a platform that provides the associates a guide from their onboarding process and through all their career at Walmart. Includes an on boarding, Skills  and training section."
-  }
-}, {
+[
+  {
+    "pattern": "walmart",
+    "type": "pattern",
+    "patternUrl": "markers/walmart.patt",
+    "object": {
+      "type": "a-video",
+      "rotation": "-90 0 0",
+      "src": "video",
+      "width":"2" ,
+      "height":"1",
+      "position":"0 .5 0"
+    }
+  },
+  {
+    "pattern": "onboarding",
+    "type": "pattern",
+    "patternUrl": "markers/onboarding.patt",
+    "object": {
+      "type": "text",
+      "rotation": "-90 0 0",
+      "material": "color: white;",
+      "url": "https://www.sams.com.mx/",
+      "target": "_blank",
+      "title": "On Boarding",
+      "text": "Onboarding is a platform that provides the associates a guide from their onboarding process and through all their career at Walmart. Includes an on boarding, Skills  and training section."
+    }
+  },
+  {
   "pattern": "compass",
   "type": "pattern",
   "patternUrl": "markers/compass.patt",
