@@ -3,7 +3,7 @@
 	<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
 </head>
 <body>
-<!--a-scene>
+<a-scene>
 	<a-assets>
 		<video id="video" autoplay loop="true" src="video/robotSinSonido.mp4"></video>
 		<img id="poweredTexture" src="images/powered.png">
@@ -16,8 +16,15 @@
 	<a-plane position="0 -4.3 -19.5" rotation="0 0 0" width="17.5" height="1" color="#0073CB"></a-plane>
 	<a-plane position="0 4.3  -19.5" rotation="0 0 0" width="17.5" height="1" color="#0073CB"></a-plane>
 	<a-image position = "7.5 -4.3 -19.2" width="1" height="1" src="#poweredTexture"></a-image>
-</a-scene-->
+</a-scene>
+<script>
+	window.addEventListener('click', function () {
+		var v = document.querySelector('#video');
+		v.play();
+	});
+</script>
 
+<!--
 <script src="https://rawgit.com/aframevr/aframe/master/dist/aframe-master.min.js"></script>
 
 <a-assets>
@@ -33,6 +40,6 @@
 		v.play();
 	});
 </script>
-
+-->
 </body>
 </html>
