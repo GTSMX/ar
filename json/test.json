@@ -17,6 +17,23 @@
     }
   },
   {
+    "pattern": "walmart",
+    "type": "pattern",
+    "patternUrl": "markers/walmart.patt",
+    "object": {
+      "type": "a-video",
+      "rotation": "-90 0 0",
+      "src": "video",
+      "width":"2" ,
+      "height":"1",
+      "position":"0 0 0",
+      "assets" : {
+        "src" : "video/video1.webm",
+        "id"  : "video1"
+      }
+    }
+  },
+  {
     "pattern": "onboarding",
     "type": "pattern",
     "patternUrl": "markers/onboarding.patt",
