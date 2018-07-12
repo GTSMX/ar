@@ -19,8 +19,8 @@ AFRAME.registerComponent('videoplay', {
     boundClickHandlerStop: undefined,
 
     clickHandlerPlay: function hrefClickHandler() {
-        console.log('play');
-        var video = document.getElementById('video');
+        console.log('play: ',this.el.id);
+        var video = document.getElementById(this.el.id);
         video.play();
         play = true;
     },
@@ -30,7 +30,7 @@ AFRAME.registerComponent('videoplay', {
      * Called once when component is attached. Generally for initial setup.
      */
     init: function() {
-        console.log("VIDEOPLAY");
+        console.log("VIDEOPLAY" , this.el.id , this.el);
 
         this.boundClickHandlerPlay = this.clickHandlerPlay.bind(this);
         this.el.addEventListener('click', this.boundClickHandlerPlay);
@@ -39,7 +39,7 @@ AFRAME.registerComponent('videoplay', {
         var visibile = document.querySelector("a-marker").object3D.visible;
         if(!visibile && play)
         {
-            var video = document.getElementById('video');
+            var video = document.getElementById(this.el.id);
             video.pause();
             video.currentTime = 0;
             play = false;

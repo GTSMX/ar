@@ -1,0 +1,21 @@
+<html>
+<head>
+	<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+</head>
+<body>
+<a-scene>
+	<a-assets>
+		<video id="video" autoplay loop="true" src="video/robot.mp4"></video>
+		<img id="poweredTexture" src="images/powered.png">
+	</a-assets>
+
+	<!-- Using the asset management system. -->
+	<a-video src="#video" width="16" height="9" position="0 0 -20"></a-video>
+	<a-plane position="8.3 0 -19.5" rotation="0 0 0" width="1" height="9.5" color="#0073CB"></a-plane>
+	<a-plane position="-8.3 0 -19.5" rotation="0 0 0" width="1" height="9.5" color="#0073CB"></a-plane>
+	<a-plane position="0 -4.3 -19.5" rotation="0 0 0" width="17.5" height="1" color="#0073CB"></a-plane>
+	<a-plane position="0 4.3  -19.5" rotation="0 0 0" width="17.5" height="1" color="#0073CB"></a-plane>
+	<a-image position = "7.5 -4.3 -19.2" width="1" height="1" src="#poweredTexture"></a-image>
+</a-scene>
+</body>
+</html>

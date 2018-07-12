@@ -879,18 +879,48 @@ function generateModel(obj)
 
 function generateVideo(obj)
 {
-	//<a-video id="video" src="#video" width="2" height="1" position="0 .5 0" rotation="-90 0 0" ></a-video>
 
-    var object 	= document.createElement(obj.type);
-    object.setAttribute("id"		, obj.src);
-    object.setAttribute("src"		, '#'+obj.src);
-    object.setAttribute("width"		, obj.width);
-    object.setAttribute("height"	, obj.height);
-    object.setAttribute("position"	, obj.position);
-    object.setAttribute("rotation"	, obj.rotation);
-    object.setAttribute("videoplay" , true);
+	/*
+	 <video id="video" autoplay loop="true" src="video/robot.mp4"></video>
+	 <video id="video" playsinline loop="true" src="video/video1.webm"></video>
+	 <a-video src="#video" width="16" height="9" position="0 0 -20"></a-video>
+	 <a-plane position="8.3 0 -19.5" rotation="0 0 0" width="1" height="9.5" color="#0073CB"></a-plane>
+	 <a-plane position="-8.3 0 -19.5" rotation="0 0 0" width="1" height="9.5" color="#0073CB"></a-plane>
+	 <a-plane position="0 -4.3 -19.5" rotation="0 0 0" width="17.5" height="1" color="#0073CB"></a-plane>
+	 <a-plane position="0 4.3  -19.5" rotation="0 0 0" width="17.5" height="1" color="#0073CB"></a-plane>
+	 <a-image position = "7.5 -4.3 -19.2" width="1" height="1" src="#poweredTexture"></a-image>
+	 */
+	var video 	= document.createElement('video');
+	video.setAttribute("id", obj.assets.id);
+	video.setAttribute("playsinline", true);
+	video.setAttribute("loop"	, "true");
+	video.setAttribute("src"	, obj.assets.src);
+	addAsset(video);
 
-    return object;
+	var object 	= document.createElement(obj.type);
+	object.setAttribute("id"				, obj.assets.id);
+	object.setAttribute("src"				, '#'+obj.assets.id);
+	object.setAttribute("width"			, obj.width);
+	object.setAttribute("height"		, obj.height);
+	object.setAttribute("position"	, obj.position);
+	object.setAttribute("rotation"	, obj.rotation);
+	object.setAttribute("videoplay" , true);
+
+	var marcoBot = document.createElement('a-plane');
+	marcoBot.setAttribute("position" , ".03 -.015 0.05");
+	marcoBot.setAttribute("rotation" , "-90 0 0");
+	marcoBot.setAttribute("width" 	 , "2.3");
+	marcoBot.setAttribute("height" 	 , "1.3");
+	marcoBot.setAttribute("color" 	 , "#0073CB");
+
+	var powered = document.createElement('a-image');
+	powered.setAttribute("position" , "1 .01 .6");
+	powered.setAttribute("rotation" , "-90 0 0");
+	powered.setAttribute("width" 	 , ".2");
+	powered.setAttribute("height" 	 , ".2");
+	powered.setAttribute("src" 	 	 , "#poweredTexture");
+
+	return [object,marcoBot,powered];
 
 
 	//return object;
@@ -920,9 +950,9 @@ function generateObject(obj)
 			object = generateModel(obj);
 		break;
 
-        case 'a-video':
-            object = generateVideo(obj);
-            break;
+		case 'a-video':
+				object = generateVideo(obj);
+		break;
 
 		case 'text':
 			object = generateText(obj);

@@ -1,15 +1,19 @@
 [
   {
-    "pattern": "walmart",
+    "pattern": "robot",
     "type": "pattern",
-    "patternUrl": "markers/walmart.patt",
+    "patternUrl": "markers/robot.patt",
     "object": {
       "type": "a-video",
       "rotation": "-90 0 0",
       "src": "video",
       "width":"2" ,
       "height":"1",
-      "position":"0 .5 0"
+      "position":"0 0 0",
+      "assets" : {
+        "src" : "video/robot.mp4",
+        "id"  : "robotVideo"
+      }
     }
   },
   {
