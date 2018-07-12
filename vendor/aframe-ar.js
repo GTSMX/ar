@@ -894,6 +894,7 @@ function generateVideo(obj)
 	video.setAttribute("id", obj.assets.id);
 	video.setAttribute("playsinline", true);
 	video.setAttribute("loop"	, "true");
+	video.setAttribute("controls"	, true);
 	video.setAttribute("src"	, obj.assets.src);
 	addAsset(video);
 
@@ -907,7 +908,7 @@ function generateVideo(obj)
 	object.setAttribute("videoplay" , true);
 
 	var marcoBot = document.createElement('a-plane');
-	marcoBot.setAttribute("position" , ".03 -.015 0.05");
+	marcoBot.setAttribute("position" , ".03 -.1 0.05");
 	marcoBot.setAttribute("rotation" , "-90 0 0");
 	marcoBot.setAttribute("width" 	 , "2.3");
 	marcoBot.setAttribute("height" 	 , "1.3");
