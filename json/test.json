@@ -11,7 +11,7 @@
       "height":"1",
       "position":"0 0 0",
       "assets" : {
-        "src" : "video/robotSinSonido.mp4",
+        "src" : "video/robot.mp4",
         "id"  : "robotVideo"
       }
     }
